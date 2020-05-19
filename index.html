@@ -34,7 +34,7 @@
         </p>
         <p>Do your best and have fun!</p>
       </div>
-      <img src="mona.png" />
+      <img src="mona.png" onclick="reset()" />
     </div>
     <div id="content">
       <p>The weather outside is...</p>
@@ -328,6 +328,8 @@
         update(roulette);
       }
       function buttonClicked() {
+        roulette = randomNumber(0, 4);
+        window.localStorage.setItem("roulette", roulette);
         hideEphemeral();
         showContent();
         animate(1000, roulette);
@@ -362,14 +364,17 @@
             return img;
           }
         );
-        var storage = window.localStorage;
-        roulette = storage.getItem("roulette");
-        if (!roulette) {
-          roulette = randomNumber(0, 4);
-          storage.setItem("roulette", roulette);
-        } else {
+        roulette = window.localStorage.getItem("roulette");
+        if (roulette) {
           hideEphemeral();
           finish();
+        }
+      }
+      var resetCounter = 23;
+      function reset() {
+        if (--resetCounter <= 0) {
+          window.localStorage.clear();
+          location.reload();
         }
       }
     </script>
