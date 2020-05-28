@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rima Challenge</title>
+    <style type="text/css">
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #content {
+        position: relative;
+        display: none;
+      }
+      #spinner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        top: 0;
+        left: 0;
+        background-color: rgba(127, 127, 127, 0.5);
+      }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153665955-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-153665955-1');
+    </script>
+  </head>
+  <body onload="load()">
+    <div id="instructions">
+      <h1>Bienvenidos al Rima Challenge</h1>
+      <p>
+        Para aprender a rimar deber practicar y recuerda que además de hablar,
+        puedes bailar.
+      </p>
+      <div id="ephemeral">
+        <p>
+          Cuando estés lista&hellip;
+          <button onclick="buttonClicked()">
+            ¡Haz click acá!
+          </button>
+        </p>
+      </div>
+      <img src="mona.png" onclick="reset()" />
+      <p>No olvides dar tu cien para pasarlo bien.</p>
+    </div>
+    <div id="content">
+      <div id="image">loading...</div>
+      <div id="spinner">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          style="margin: auto; display: block;"
+          width="200px"
+          height="200px"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="xMidYMid"
+        >
+          <g transform="rotate(0 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="-0.9166666666666666s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+          <g transform="rotate(30 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="-0.8333333333333334s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+          <g transform="rotate(60 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="-0.75s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+          <g transform="rotate(90 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="-0.6666666666666666s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+          <g transform="rotate(120 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="-0.5833333333333334s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+          <g transform="rotate(150 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="-0.5s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+          <g transform="rotate(180 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="-0.4166666666666667s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+          <g transform="rotate(210 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="-0.3333333333333333s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+          <g transform="rotate(240 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="-0.25s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+          <g transform="rotate(270 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="-0.16666666666666666s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+          <g transform="rotate(300 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="-0.08333333333333333s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+          <g transform="rotate(330 50 50)">
+            <rect
+              x="47"
+              y="24"
+              rx="0"
+              ry="0"
+              width="6"
+              height="12"
+              fill="#000000"
+            >
+              <animate
+                attributeName="opacity"
+                values="1;0"
+                keyTimes="0;1"
+                dur="1s"
+                begin="0s"
+                repeatCount="indefinite"
+              ></animate>
+            </rect>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <script>
+      var imgs = [];
+      var roulette = undefined;
+      function randomNumber(from, to) {
+        var range = to - from;
+        return Math.floor(Math.random() * range + from);
+      }
+      function update(idx) {
+        var content = document.createElement("div");
+        content.id = "image";
+        content.appendChild(imgs[idx]);
+        document.getElementById("image").replaceWith(content);
+      }
+      function animate(timeout, idx) {
+        idx = (idx + 1) % imgs.length;
+        update(idx);
+        if (timeout <= 20) {
+          setTimeout(finish, 17);
+        } else {
+          timeout *= 0.9;
+          setTimeout(animate, timeout, timeout, idx);
+        }
+      }
+      function removeSpinner() {
+        try {
+          document.getElementById("spinner").remove();
+        } catch (e) {
+          console.error(e);
+        }
+      }
+      function finish() {
+        removeSpinner();
+        showContent();
+        update(roulette);
+      }
+      function buttonClicked() {
+        roulette = randomNumber(0, 4);
+        window.localStorage.setItem("rima", roulette);
+        hideEphemeral();
+        showContent();
+        animate(1000, roulette);
+      }
+      function showEphemeral() {
+        show("ephemeral");
+      }
+      function hideEphemeral() {
+        hide("ephemeral");
+      }
+      function showContent() {
+        show("content");
+      }
+      function setDisplay(id, display) {
+        try {
+          document.getElementById(id).style.display = display;
+        } catch (e) {
+          console.error(e);
+        }
+      }
+      function show(id) {
+        setDisplay(id, "block");
+      }
+      function hide(id) {
+        setDisplay(id, "none");
+      }
+      function load(doc, ev) {
+        imgs = [
+          "Diapositiva2-s.png",
+          "Diapositiva3-s.png",
+          "Diapositiva4-s.png",
+          "Diapositiva5-s.png",
+          "Diapositiva6-s.png",
+        ].map(function (fname) {
+          var img = new Image();
+          img.src = fname;
+          return img;
+        });
+        roulette = window.localStorage.getItem("rima");
+        if (roulette) {
+          hideEphemeral();
+          finish();
+        }
+      }
+      var resetCounter = 23;
+      function reset() {
+        if (--resetCounter <= 0) {
+          window.localStorage.clear();
+          location.reload();
+        }
+      }
+    </script>
+  </body>
+</html>
